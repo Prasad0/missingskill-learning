@@ -2,11 +2,12 @@
 
 ## Index
 
-1. Linux
+* Linux
+
   * History
   * Linux Description
   * Popular Distribution
   * Commands
   * File System
 
-1. Git
+* Git
