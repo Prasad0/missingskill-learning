@@ -37,6 +37,26 @@
       console.log(pi); // 3.14
    ```
 
+### Logical Operator
+
+|Operator | Description|
+|-------|------|
+| && | It Evaluate single value only if its truthy and move to next operand else stop executing| 
+| \|\| | It is return true even if one of its operand is true|
+|!| It is a boolean converter|
+
+### Arithmetic operator
+
+   `+,-,*,/,%,++,--`
+### Assignment operator
+
+   `=, +=, -=,*=, /=, %=`
+### Comparison operator
+
+   `==, ===, !=, > ,<, >=,<=`
+### Ternary operator
+   `?:`
+
 ### Primitive Data Type - which cannot be changed
 
 * **string** - string are nothing but anything wrapped inside double quotes are called string

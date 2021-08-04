@@ -24,7 +24,7 @@ hello();
 ```
 
 
-### Function can be declared in two ways
+### Two way to Declare function
 
 * Function declaration
 
@@ -54,7 +54,7 @@ hello();
             }
             completeTask(print)
         ```
-### Returning  a function from inside through outside function
+### Returning  a function 
 
 * If we want to pass value through function or we want to access inner function from outside we can use return keyword
 
