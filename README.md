@@ -2,7 +2,7 @@
 
 ## Index
 
-* Linux ![](linux.md)
+* Linux ![label](linux.md)
 
   * History
   * Linux Description
