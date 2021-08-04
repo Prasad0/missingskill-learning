@@ -50,3 +50,57 @@
 
 ## Web Port
 
+* http use port 80 this is default.
+* https use port 443.
+
+## Http Verbs
+
+1. Get - Job of get is to fetch data
+1. Post - Job of post is to send data to server
+1. Put - Job of post is to send data to server to update or create a resource.
+1. Delete - Delete the resource at specific url
+1. Option - query
+1. Head - query
+
+## HTTP Header
+
+ Any request which sends to server or any request that comes from server will have header.
+
+ <b>Request Header</b> - This type of headers contains information about the fetched request by the client.
+ <br>
+<b>Response Header</b> - This type of headers contains the location of the source that has been requested by the client.
+
+## HTTP Ports
+
+|port number| Description|
+|-----------|------------|
+|100||
+|200| All the successful request and response show this (200,201,202 series)|
+|300| For any kind of migration we use this port (301,302,..)|
+|400| It is use for user authentication or user check (for eg :- 404 Page not found)|
+|500| It means server has some issue |
+
+## Software License
+
+* Any software development cannot happen without license
+* Apache 2.0
+* MIT
+* BSD
+* GPL
+* Mozilla
+
+## Database
+
+* Collection of information that can be store, update and delete. There are two type:-
+1. Relational - use table format
+
+    * MySql
+    * Postgre Sql
+    * Maria BD
+
+1. Non Relational - use schema (or simple team structure)
+
+    * Mongo DB
+    * Redis
+    * Cassandra
+    * NeoJS
