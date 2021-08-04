@@ -116,7 +116,7 @@ console.log(x + y) //undefinedstr
 
 ### Non-Primitive Data Type - Which can be changed
 
-* Object - In object values are store using key value pairs. Keys are always a string and values are any primitive datatype
+* **Object** - In object values are store using key value pairs. Keys are always a string and values are any primitive datatype
 
    ```javascript
    
@@ -151,7 +151,7 @@ console.log(x + y) //undefinedstr
 
    console.log(objO.["full name"])
    ```
- * Array - Array is specialize object 
+ * **Array** - Array is specialize object 
 
     ```javascript
 
@@ -191,7 +191,7 @@ console.log(x + y) //undefinedstr
 
 ### Functional and lexcial scope
 
-* Functional scope
+* **Functional scope**
 
    - If we run a function and we declare a variable it will get hoisted at the top inside function
 
@@ -237,7 +237,7 @@ console.log(x + y) //undefinedstr
    */
    ```
 
-* Lexcical scope
+* **Lexcical scope**
 
       `It start with curly bracket only and the scope of the variable is only till that block`
    
@@ -259,7 +259,7 @@ console.log(x + y) //undefinedstr
       **/
    ```
 
-* Copy By Value / Pass By Value (Primitive Datatype)
+* **Copy By Value / Pass By Value (Primitive Datatype)**
    - If we copy primitive variable they copy the actual value that they are holding
 
    ```javascript
@@ -278,7 +278,7 @@ console.log(x + y) //undefinedstr
       /**explaination- Here the value for crazy and insane are store in two different memory since the copy is passed to insane and when crazy get override the value of crazy get update but insane remains same**/
    ```
 
-* Pass by Reference (Non-Primitive DataType)
+* **Pass by Reference (Non-Primitive DataType)**
 
    - It means that it is actually passing the reference to memory location where the data is stored
 
