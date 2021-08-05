@@ -27,10 +27,15 @@
 |git checkout branch_name | It is used to switch from one branch to another branch |
 |git checkout -- filename | It is also use to revert the changes. If multiple file are deleted use (git checkout --)|
 |git pull origin branch_name | use to pull from remote server|
+|git stash| used for backup your file|
+|git stash pop| used to bring back your file which was stash|
+|git stash list| To check changes|
 
 ```
 Note:- You cant push the code if remote server is ahead. So you will first need to pull and then push 
 ```
 
+### Git Conflict
 
+* It occurs when two seperate branches have made edits to same line in file.
   
