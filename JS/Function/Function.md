@@ -1,5 +1,6 @@
 ## Functions 
 
+* Js function are first class Citizen.
 * Js function are like a block whatever we define inside remain private and no one can access it from outside
 * It can be invoke multiple time and can also be reused
 * In Javascript every thing is an object even the function is and object
@@ -39,7 +40,7 @@ hello();
         }
         ```
 
-* Assignment function
+* Assignment function or Function Expression
 
     - function is assigned to variable and it does not get hoisted instead if it's es5 variable then it will get hoisted
     
@@ -142,6 +143,8 @@ console.log(result) //80
 ### IIFE - Immediately Invoked Function Expression / Self Executing Function Expression(SEF)
 
 * It is use to execute function immediately. 
+* It is called only once the function is loaded.
+
 ```js
 
 (function()
