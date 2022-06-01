@@ -218,3 +218,105 @@ console.log(no.tostring(2));
         JSON.parse("{}");
         ``` 
 
+### Shallow copy and DeepCopy
+
+
+ - Object are copy by reference so if i create an object 'demo' and assign it to any other variable 'live'. So demo key will be assign to live object and anything which i update into live will get reflected to demo
+
+ 1. Shallow Copy 
+
+    - If I have an object mall
+     
+    ```js
+        var mall = {
+        name: 'orbit',
+        location: 'mumbai',
+        clothsfor: ['mens', 'womens', 'kids'],
+        timing: '8am - 10pm'
+        }
+    ```
+
+    - And if I want to copy all the key into another object called mall2 but don't want to change anything if i update in mall2 then by spread operator we can achieve it.
+
+    ```js
+        let mall2 = {...mall}
+
+        mall2.name = 'capital';
+
+        console.log(mall2, mall)
+
+        /*
+            output-
+
+            {
+                name: 'capital',    <------ mall2
+                location: 'mumbai',
+                clothsfor: ['mens', 'womens', 'kids'],
+                timing: '8am - 10pm'
+            } 
+            
+            {
+                name: 'orbit',      <------ mall
+                location: 'mumbai',
+                clothsfor: [ 'mens', 'womens', 'kids' ],
+                timing: '8am - 10pm'
+            }
+        */
+    ```
+
+    - But if i try to push anything in mall2 for key clothsfor then it will end updating mall also this is shallowcopy to avoid this we need to do deepcopy
+
+    ```js
+        
+        mall2.clothsfor.push(3);
+        /*
+        {
+            name: 'capital',
+            location: 'mumbai',
+            clothsfor: [ 'mens', 'womens', 'kids', 3 ],   <---------- mall2
+            timing: '8am - 10pm'
+        } 
+        
+        {
+            name: 'orbit',
+            location: 'mumbai',
+            clothsfor: [ 'mens', 'womens', 'kids', 3 ], <---------- mall
+            timing: '8am - 10pm'
+        }
+        */
+    ```
+
+   2. Deep Copy
+
+   ```js
+        var mall = {
+            name: 'orbit',
+            location: 'mumbai',
+            clothsfor: ['mens', 'womens', 'kids'],
+            timing: '8am - 10pm'
+        }
+
+        console.log("malls =>", mall)
+
+        let mall2 = {...mall, clothsfor: [...mall.clothsfor]} //< ------ deepcopy
+
+        mall2.name = 'capital';
+        mall2.clothsfor.push(3);
+        console.log(mall2, mall)
+
+        /*
+
+            {
+                name: 'capital',
+                location: 'mumbai',
+                clothsfor: [ 'mens', 'womens', 'kids', 3 ], <---------- updated mall2
+                timing: '8am - 10pm'
+            } 
+            {
+                name: 'orbit',
+                location: 'mumbai',
+                clothsfor: [ 'mens', 'womens', 'kids' ], <----------- didn't updated mall
+                timing: '8am - 10pm'
+            }
+        */
+   ```
