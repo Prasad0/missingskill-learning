@@ -55,6 +55,14 @@ hello();
             }
             completeTask(print)
         ```
+
+    - You can't write name after function key word that is only done for debug purpose.
+
+        ```js
+            const completeTask = function hello(){
+                console.log("first", hello);
+            }
+        ```
 ### Returning  a function 
 
 * If we want to pass value through function or we want to access inner function from outside we can use return keyword
@@ -74,6 +82,26 @@ hello();
 
     /* (return inner) This is returning a function  and it is an object means it is a pass by reference means it is not returning a function it is returning reference where the function is defined*/
 ```
+
+### Safty Measure to be taken 
+
+* While defining function and calling it make sure to check whether it's a function or not
+    - for eg.
+
+    ````js
+        var invoke = function (){
+            console.log('Second');
+        }
+
+        invoke = 12;
+
+        console.log(typeof invoke) 
+
+        // this will be a number but we have declare invoke as function 
+        // So to avoid it we need to put a check on it
+
+        !!invoke && (typeof invoke === "function") && invoke
+    ```
 
 `Safty measure to be taken to check whether we are calling a function or not and also we can handle if it returns empty function`
 
