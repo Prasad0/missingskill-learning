@@ -110,3 +110,49 @@ Bought rice { money: 100, rice: 'rice' }
 rice cooked { rice: 'rice' }
 */
 ```
+
+
+### Parallel Promise
+
+>The Promise.all() method takes an iterable of promises as an input, and returns a single Promise that resolves to an array of the results of the input promises. This returned promise will fulfill when all of the input's promises have fulfilled, or if the input iterable contains no promises. It rejects immediately upon any of the input promises rejecting or non-promises throwing an error, and will reject with this first rejection message / error.
+
+```js
+
+var task1 = function (data) {
+    return new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            resolve(10);
+        }, 4000)
+    });
+}
+
+var task2 = function (data) {
+    return new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            resolve(20);
+        }, 2000)
+    });
+}
+
+const taskPromise = task1();
+const task2Promise = task2();
+
+// the execution will happen according to order given
+
+const wait = Promise.all([taskPromise, task2Promise]);
+
+// wait is another promise so we will have to use then again
+
+
+wait.then(function(data){
+    console.log(data, "dd")
+}).catch(function(err){
+    console.log(err, "err")
+})
+
+/* 
+    this will return all the data in array.
+
+    But if any of the promise fail all the promise will get failed
+*/
+```
